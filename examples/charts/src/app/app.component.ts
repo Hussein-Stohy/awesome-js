@@ -1,15 +1,13 @@
-import { Component, signal, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { echartsBaseModel, echartsDerivativeModel, LLMService } from '@awesome/charts';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class App implements OnInit {
-  protected readonly title = signal('charts_example');
+export class AppComponent implements OnInit {
+  title = 'charts_example';
   baseModel: any;
   derivativeModel: any;
 

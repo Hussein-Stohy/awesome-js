@@ -5,51 +5,36 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:legacy": "set NODE_OPTIONS=--openssl-legacy-provider && ng serve",
     "build": "ng build",
+    "build:legacy": "set NODE_OPTIONS=--openssl-legacy-provider && ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build:lib": "ng build @awesome/charts"
-  },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "test": "ng test"
   },
   "dependencies": {
-    "@angular/common": "^20.2.0",
-    "@angular/compiler": "^20.2.0",
-    "@angular/core": "^20.2.0",
-    "@angular/forms": "^20.2.0",
-    "@angular/platform-browser": "^20.2.0",
-    "@angular/router": "^20.2.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.0",
-    "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1"
+    "@angular/common": "^11.0.0",
+    "@angular/compiler": "^11.0.0",
+    "@angular/core": "^11.0.0",
+    "@angular/forms": "^11.0.0",
+    "@angular/platform-browser": "^11.0.0",
+    "@angular/platform-browser-dynamic": "^11.0.0",
+    "@angular/router": "^11.0.0",
+    "@awesome/charts": "file:../../dist/charts",
+    "rxjs": "^6.6.0",
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^20.3.2",
-    "@angular/build": "^20.3.2",
-    "@angular/cli": "^20.2.2",
-    "@angular/compiler-cli": "^20.2.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.9.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^20.3.0",
-    "typescript": "~5.9.2"
+    "@angular-devkit/build-angular": "^0.1100.0",
+    "@angular/cli": "~11.0.0",
+    "@angular/compiler": "^11.0.0",
+    "@angular/compiler-cli": "^11.0.0",
+    "@types/jasmine": "~3.6.0",
+    "jasmine-core": "~3.6.0",
+    "karma": "~5.1.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "1.5.4",
+    "typescript": "~4.0.0"
   }
 }
-
-

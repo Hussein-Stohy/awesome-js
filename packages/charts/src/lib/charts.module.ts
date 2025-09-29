@@ -7,10 +7,10 @@ import { LLMService } from './common/services/llmservice';
 
 
 @NgModule({
-providers: [LLMService],
+  providers: [LLMService],
   imports: [
     CommonModule  
   ],
-exports: []
+  exports: []
 })
 export class ChartsModule {}

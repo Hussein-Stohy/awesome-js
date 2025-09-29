@@ -8,11 +8,15 @@
     "declarationMap": true,
     "inlineSources": true,
     "sourceMap": true,
-
-    "types": []
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": [],
+    "preserveSymlinks": true,
+    "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.json"
   ],
   "exclude": [
     "**/*.spec.ts"

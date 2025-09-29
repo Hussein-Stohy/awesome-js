@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import Ajv from 'ajv';
+import * as Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import { echartsOptionsSchema } from '../../schemas/echarts-options.schema';
 
@@ -18,8 +18,8 @@ export class LLMService {
   private readonly model = 'gpt4all'; // adjust if needed
 
   constructor(private http: HttpClient) {
-    this.ajv = new Ajv({ allErrors: true });
-    addFormats(this.ajv);
+    this.ajv = new (Ajv as any)({ allErrors: true });
+    (addFormats as any)(this.ajv);
     this.validate = this.ajv.compile(echartsOptionsSchema);
   }
 

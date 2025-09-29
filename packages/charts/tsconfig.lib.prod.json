@@ -3,9 +3,14 @@
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
-    "declarationMap": false
+    "declarationMap": false,
+    "preserveSymlinks": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "angularCompilerOptions": {
-    "compilationMode": "partial"
+    "compilationMode": "partial",
+    "preserveSymlinks": true,
+    "skipTemplateCodegen": false
   }
 }
