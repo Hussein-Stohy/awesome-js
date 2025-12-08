@@ -50,7 +50,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "../../packages/charts/assets",
                 "output": "/assets/"
               }
             ],
@@ -110,7 +110,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "src/assets",
+                "input": "../../packages/charts/assets",
                 "output": "/assets/"
               }
             ],
