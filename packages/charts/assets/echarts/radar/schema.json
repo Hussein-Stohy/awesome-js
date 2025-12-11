@@ -3,7 +3,7 @@
   "title": "Radar Chart Base Schema",
   "type": "object",
   "properties": {
-    "type": { "const": "radar" },
+    "type": { "type": "string" },
     "radar": { "type": "object" },
     "series": {
       "type": "array",

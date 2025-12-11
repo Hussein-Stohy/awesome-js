@@ -2,7 +2,7 @@
   "title": "Base Line Schema",
   "type": "object",
   "properties": {
-    "type": { "const": "line" },
+    "type": { "type": "string" },
     "title": { "type": "object" },
     "xAxis": { "type": "object" },
     "yAxis": { "type": "object" },

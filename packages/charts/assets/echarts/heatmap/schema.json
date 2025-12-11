@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "heatmap"
+      "type": "string"
     },
     "xAxis": {
       "type": "object",

@@ -2,23 +2,31 @@
   "$id": "base.json",
   "title": "ECharts Super Base Schema",
   "type": "object",
+  "additionalProperties": true,
   "properties": {
-    "title": {
-      "type": "object",
-      "properties": {
-        "text": { "type": "string" },
-        "subtext": { "type": "string" },
-        "left": { "type": "string" },
-        "top": { "type": "string" }
-      },
-      "required": ["text"]
+    "type": {
+      "type": "string",
+      "description": "Chart type - accepts any string to avoid merge conflicts"
     },
+    "title": { "type": "object" },
     "tooltip": { "type": "object" },
     "legend": { "type": "object" },
     "grid": { "type": "object" },
-    "xAxis": { "type": "object" },
-    "yAxis": { "type": "object" },
-    "series": { "type": "array" }
+    "xAxis": { 
+      "anyOf": [
+        { "type": "object" },
+        { "type": "array" }
+      ]
+    },
+    "yAxis": {
+      "anyOf": [
+        { "type": "object" },
+        { "type": "array" }
+      ]
+    },
+    "series": { "type": "array" },
+    "visualMap": { "type": "object" },
+    "radar": { "type": "object" }
   }
 }
 

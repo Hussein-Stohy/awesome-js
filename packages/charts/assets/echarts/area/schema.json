@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "type": {
-      "const": "line",
+      "type": "string",
       "description": "Area charts are line charts with areaStyle."
     },
     "xAxis": {

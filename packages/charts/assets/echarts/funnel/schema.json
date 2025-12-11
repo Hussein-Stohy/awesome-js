@@ -2,7 +2,7 @@
   "title": "Funnel Chart Base Schema",
   "type": "object",
   "properties": {
-    "type": { "const": "funnel" },
+    "type": { "type": "string" },
     "series": {
       "type": "array",
       "items": {

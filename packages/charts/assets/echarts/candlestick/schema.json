@@ -2,7 +2,7 @@
   "title": "Candlestick Chart Base Schema",
   "type": "object",
   "properties": {
-    "type": { "const": "candlestick" },
+    "type": { "type": "string" },
     "xAxis": { "type": "object" },
     "yAxis": {
       "anyOf": [
