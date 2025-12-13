@@ -27,5 +27,5 @@
       }
     }
   },
-  "required": ["type", "xAxis", "yAxis", "series"]
+  "required": ["xAxis", "yAxis", "series"]
 }

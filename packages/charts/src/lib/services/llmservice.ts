@@ -187,7 +187,7 @@ MANDATORY PROPERTIES - ALWAYS INCLUDE:
 - series: MUST be array with proper data format
 
 OPTIONAL PROPERTIES (only include when explicitly needed):
-- legend: OBJECT {"data": ["series_names"]} ONLY for multi-series charts with names
+- legend: OBJECT {"data": ["series_names"]} optional; for multi-series ensure legend data matches series names
 - For ${chartType} charts: ${this.getChartSpecificRules(chartType)}${chartType === 'radar' ? '\n\nRADAR CHART AXIS OPTIMIZATION:\n- Use round numbers for max values (100, 500, 1000, 5000, 10000)\n- Avoid irregular max values that cause tick readability issues\n- Choose max values that allow clean division by 5-10 tick marks' : ''}
 
 FORBIDDEN PROPERTIES - NEVER INCLUDE:
@@ -207,7 +207,7 @@ AXIS RULES:
 LEGEND RULES - STRICT COMPLIANCE REQUIRED:
 - NEVER include legend property for: scatter, heatmap, treemap, sunburst, sankey, map, boxplot, parallel
 - SCATTER CHARTS: FORBIDDEN to include legend property - omit completely
-- Single series charts: NO legend property 
+- Single series charts: legend is ALLOWED (optional) 
 - ONLY add legend when: multiple series (2+) with different names exist
 - Legend data must exactly match series names when used
 
@@ -218,11 +218,6 @@ ${chartType === 'heatmap' ? 'HEATMAP CHART CRITICAL RULES:\n- ABSOLUTELY REQUIRE
 ${areaChartNote ? 'AREA CHART: Use series type "line" with areaStyle property' : ''}
 
 Create realistic data matching user requirements. Generate professional, valid ECharts JSON only.`;
-
-    if (example && Object.keys(example).length > 0) {
-      systemPrompt += `\n\nEXAMPLE STRUCTURE (use different data):
-${JSON.stringify(example, null, 2)}`;
-    }
 
     messages.push({
       role: "system",
